@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 @PropertySource("classpath:parent.properties")
 public class ParentPropertiesSource {
-    @Value("test.key1")
+    @Value("${test.key1}")
     String key1;
 
     public String getKey1() {

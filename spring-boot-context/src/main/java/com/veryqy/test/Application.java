@@ -49,6 +49,8 @@ package com.veryqy.test;
 import com.veryqy.child.AppConfig;
 import com.veryqy.child.AppPropertiesSource;
 import com.veryqy.parent.ParentConfig;
+import com.veryqy.parent.ParentPropertiesSource;
+import javafx.scene.Parent;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
 
@@ -62,14 +64,14 @@ public class Application {
                 .properties("key1:test1", "key2:test2")
                 .build()
                 .run(args);
-
         for (String beanName : ctx.getBeanDefinitionNames()) {
             System.out.println(beanName + " : " + ctx.getBean(beanName).getClass().toString());
         }
-
-        AppPropertiesSource bean = ctx.getBean(AppPropertiesSource.class);
+        AppPropertiesSource appPropertiesSource = ctx.getBean(AppPropertiesSource.class);
+        ParentPropertiesSource parentPropertiesSource = ctx.getBean(ParentPropertiesSource.class);
         System.out.println("app.name:"+ctx.getEnvironment().getProperty("test.key1"));
-
+        System.out.println(appPropertiesSource.getKey1());
+        System.out.println(parentPropertiesSource.getKey1());
         try {
             Thread.currentThread().join();
         } catch (InterruptedException e) {

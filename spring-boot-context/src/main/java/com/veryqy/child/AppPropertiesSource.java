@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 @PropertySource("classpath:app.properties")
 public class AppPropertiesSource {
-    @Value("test.key1")
+    @Value("${test.key1}")
     String key1;
 
     public String getKey1() {
