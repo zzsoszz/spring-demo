@@ -1,0 +1,9 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.veryqy.module1.Module1Configuration
+
+# Environment Post Processor
+org.springframework.boot.env.EnvironmentPostProcessor=\
+com.veryqy.module1.ModuleEnvironmentPostProcessor
+
+
+#org.springframework.cloud.bus.BusEnvironmentPostProcessor

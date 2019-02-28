@@ -2,3 +2,5 @@
 /spring-boot-context/.idea
 /spring-context-event/.idea
 /spring-context-event/target
+/spring-boot-autoconfigure/target
+/spring-boot-autoconfigure/.idea
