@@ -64,9 +64,11 @@ public class Application {
                 .properties("key1:test1", "key2:test2")
                 .build()
                 .run(args);
+
         for (String beanName : ctx.getBeanDefinitionNames()) {
             System.out.println(beanName + " : " + ctx.getBean(beanName).getClass().toString());
         }
+
         AppPropertiesSource appPropertiesSource = ctx.getBean(AppPropertiesSource.class);
         ParentPropertiesSource parentPropertiesSource = ctx.getBean(ParentPropertiesSource.class);
         System.out.println("app.name:"+ctx.getEnvironment().getProperty("test.key1"));
