@@ -1,18 +1,18 @@
-package com.veryqy.test;
+package com.veryqy.parent;
 
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-@MyPropertiesSource
-public class MyService {
+@Component
+public class HelloService {
 
     @Value("${app.name}")
     String name;
-
+    
     public void say(){
         System.out.println("hello:"+name);
     }

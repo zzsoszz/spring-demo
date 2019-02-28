@@ -8,10 +8,12 @@ package com.veryqy.parent;
 
 import com.veryqy.test.MyPropertySourcesPlaceholderConfigurer;
 import com.veryqy.test.MyService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.event.ContextRefreshedEvent;
+import org.springframework.context.event.ContextStartedEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.core.env.MapPropertySource;
 import org.springframework.core.env.PropertySource;
@@ -24,6 +26,11 @@ import java.util.Map;
 @Configuration
 @ComponentScan(basePackages = {"com.veryqy.parent"})
 public class ParentConfig {
+
+    @EventListener(ContextStartedEvent.class)
+    public void startup(){
+        System.out.println("startup..............");
+    }
 
     @Bean
     public MyPropertySourcesPlaceholderConfigurer configSourcesConfigurer(){

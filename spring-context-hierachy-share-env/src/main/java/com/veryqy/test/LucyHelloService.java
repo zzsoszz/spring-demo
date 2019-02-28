@@ -1,14 +1,13 @@
 package com.veryqy.test;
 
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-@MyPropertiesSource
-public class MyService {
+@Component
+public class LucyHelloService {
 
     @Value("${app.name}")
     String name;
@@ -21,8 +20,10 @@ public class MyService {
     public void init(){
         System.out.println("init.....");
     }
+
     @PreDestroy
     public void destroy(){
         System.out.println("desctroy.....");
     }
+
 }

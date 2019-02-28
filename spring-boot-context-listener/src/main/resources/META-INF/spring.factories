@@ -1,0 +1,21 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.veryqy.module1.Module1Configuration
+
+# Environment Post Processor
+org.springframework.boot.env.EnvironmentPostProcessor=\
+com.veryqy.module1.ModuleEnvironmentPostProcessor
+#org.springframework.cloud.bus.BusEnvironmentPostProcessor
+
+
+# Application Listeners
+#org.springframework.context.ApplicationListener=\
+#org.springframework.cloud.bootstrap.BootstrapApplicationListener,\
+#org.springframework.cloud.bootstrap.LoggingSystemShutdownListener,\
+#org.springframework.cloud.context.restart.RestartListener
+#
+## Bootstrap components
+#org.springframework.cloud.bootstrap.BootstrapConfiguration=\
+#org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration,\
+#org.springframework.cloud.bootstrap.encrypt.EncryptionBootstrapConfiguration,\
+#org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration,\
+#org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration

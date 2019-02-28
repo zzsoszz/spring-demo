@@ -37,7 +37,7 @@ public class AppConfig {
     public MyPropertySourcesPlaceholderConfigurer configSourcesConfigurer(){
         MyPropertySourcesPlaceholderConfigurer configSourcesConfigurer=   new MyPropertySourcesPlaceholderConfigurer();
         Map<String,Object> map=new HashMap<String,Object>();
-        map.put("name","wang");
+        map.put("app.name","wang");
         map.put("age",23);
         MapPropertySource mapPropertySource=new MapPropertySource("person",map);
         List<PropertySource> propertySourceList=new ArrayList<PropertySource>();
