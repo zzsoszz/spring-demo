@@ -59,7 +59,7 @@ public class Application {
         ApplicationContext parent = new AnnotationConfigApplicationContext(ParentConfig.class);
         ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
         ((AnnotationConfigApplicationContext) ctx).setParent(parent);
-//        ((AnnotationConfigApplicationContext) ctx).start();
+        ((AnnotationConfigApplicationContext) ctx).start();
         HelloService helloService = ctx.getBean(HelloService.class);
         helloService.say();
         LucyHelloService lucyHelloService = ctx.getBean(LucyHelloService.class);
